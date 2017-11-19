@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context="com.example.aleya.inventory.inventory"
+    android:background="#00B8FF">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:src="@drawable/qrcode"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="center"
+        android:visibility="visible"
+        android:onClick="QrScanner"
+        android:layout_below="@+id/textView2"
+        android:layout_alignEnd="@+id/button5"
+        android:layout_marginTop="12dp"
+        tools:ignore="OnClick"
+        android:layout_alignRight="@+id/button5" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="247dp"
+        android:layout_height="39dp"
+        android:layout_alignEnd="@+id/scanbutton"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="36dp"
+        android:text=" Inventory App"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_alignRight="@+id/scanbutton"
+        android:layout_marginRight="36dp" />
+
+    <Button
+        android:id="@+id/homebutton"
+        android:layout_width="117dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:text="Home"
+        android:textColor="#000"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="456dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp" />
+
+    <Button
+        android:id="@+id/userbutton"
+        android:layout_width="118dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/homebutton"
+        android:text="User"
+        android:textColor="#000"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="456dp"
+        android:layout_toRightOf="@+id/homebutton" />
+
+    <Button
+        android:id="@+id/scanbutton"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/userbutton"
+        android:text="Scan"
+        android:textColor="#000"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="456dp"
+        android:layout_toRightOf="@+id/userbutton" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/homebutton"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginBottom="164dp"
+        android:text="SCAN IN"
+        android:onClick="QrScanner"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignLeft="@+id/textView2"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button4"
+        android:layout_marginStart="34dp"
+        android:layout_toEndOf="@+id/button4"
+        android:text="SCAN OUT"
+        android:onClick="QrScanner"
+        android:layout_marginLeft="34dp"
+        android:layout_toRightOf="@+id/button4"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button5"
+        android:layout_marginTop="37dp"
+        android:layout_toStartOf="@+id/button5"
+        android:background="#FFFFFF"
+        android:text="Item:"
+        android:layout_toLeftOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="18dp"
+        android:background="#FFFFFF"
+        android:text="In Stock:"
+        android:layout_alignLeft="@+id/textView3" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView4"
+        android:layout_toStartOf="@+id/scanbutton"
+        android:text="TextView"
+        android:visibility="invisible"
+        android:layout_toLeftOf="@+id/scanbutton" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button5"
+        android:layout_alignTop="@+id/textView4"
+        android:text="TextView"
+        android:visibility="invisible"
+        android:layout_alignLeft="@+id/button5" />
+
+</RelativeLayout>

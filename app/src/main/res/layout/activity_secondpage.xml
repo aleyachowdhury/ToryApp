@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aleya.inventory.secondpage">
+
+
+    <Button
+        android:id="@+id/scanButton"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="410dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/scan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginLeft="140dp" />
+
+    <Button
+        android:id="@+id/homebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp" />
+
+    <Button
+        android:id="@+id/userbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginStart="44dp"
+        android:text="User"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scanbutton"
+        app:layout_constraintStart_toEndOf="@+id/homebutton"
+        android:layout_marginRight="31dp"
+        android:layout_marginLeft="44dp" />
+
+    <Button
+        android:id="@+id/scanbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginStart="31dp"
+        android:text="Scan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userbutton"
+        android:layout_marginRight="177dp"
+        android:layout_marginLeft="31dp" />
+
+    <LinearLayout
+        android:id="@+id/linearView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/listView"
+        android:layout_width="397dp"
+        android:layout_height="297dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/homebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableRow
+                android:id="@+id/tabla_inventory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></TableRow>
+
+            <TableLayout
+                android:id="@+id/tabla_tory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="ITEM_ID"
+
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#7101ff"></TextView>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text="ITEM_NAME"
+
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#7101ff"></TextView>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text="QTY"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#7101ff"></TextView>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+
+                        android:text="PRICE"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#7101ff"></TextView>
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text="UNIT COST"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#7101ff"></TextView>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#0275ff"
+                        android:visibility="visible"></TextView>
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:textColor="#0275ff"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:visibility="visible"></TextView>
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#0275ff"
+                        android:visibility="visible"></TextView>
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#0275ff"
+                        android:visibility="visible"></TextView>
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+
+                        android:textColor="#0275ff"
+                        android:visibility="visible"></TextView>
+
+
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
